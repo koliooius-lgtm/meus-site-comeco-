@@ -1,0 +1,315 @@
+/* ================================
+   FLIP — Estilo inspirado no site oficial
+   ================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap');
+
+/* RESET E BASE */
+* {
+  margin: 1;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a18;
+  color: #f0ece0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* TIPOGRAFIA */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: 0.7;
+  margin-bottom: 16px;
+}
+
+strong {
+  font-weight: 500;
+  opacity: 1;
+  color: #b5a97a;
+}
+
+/* NAVEGAÇÃO */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  border-bottom: 0.5px solid rgba(4, 236, 82, 0.15);
+  position: sticky;
+  top: 0;
+  background-color: #1a1a18;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #f0ece0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #f0ece0;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 48px 64px;
+  max-width: 800px;
+  border-bottom: 0.5px solid rgba(240, 236, 224, 0.15);
+}
+
+/* TAG / LABEL */
+.tag {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #b5a978; 
+  margin-bottom: 20px;
+}
+
+/* BOTÃO */
+.botao {
+  display: inline-block;
+  border: 0.5px solid rgba(240, 236, 224, 0.35);
+  padding: 12px 28px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #f0ece0;
+  text-decoration: none;
+  margin-top: 12px;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.botao:hover {
+  background-color: rgba(240, 236, 224, 0.08);
+  border-color: rgba(240, 236, 224, 0.6);
+}
+
+/* IMAGEM */
+.imagem-full {
+  position: relative;
+  border-top: 0.5px solid rgba(240, 236, 224, 0.15);
+  border-bottom: 0.5px solid rgba(240, 236, 224, 0.15);
+}
+
+.imagem-full img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  opacity: 0.75;
+}
+
+.imagem-legenda {
+  position: absolute;
+  bottom: 20px;
+  left: 48px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #f0ece0;
+  opacity: 0.5;
+}
+
+/* SEÇÕES */
+.secao {
+  padding: 64px 48px;
+  border-bottom: 0.5px solid rgba(240, 236, 224, 0.15);
+  max-width: 900px;
+}
+
+/* LISTA NUMERADA ESTILIZADA */
+.item-lista {
+  display: flex;
+  gap: 32px;
+  padding: 32px 0;
+  border-bottom: 0.5px solid rgba(240, 236, 224, 0.1);
+}
+
+.item-lista:last-child {
+  border-bottom: none;
+}
+
+.item-numero {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  color: #b5a97a;
+  letter-spacing: 1px;
+  min-width: 28px;
+  padding-top: 4px;
+}
+
+.item-conteudo {
+  flex: 1;
+}
+
+/* SEÇÃO DESTAQUE */
+.secao-destaque {
+  padding: 80px 48px;
+  border-bottom: 0.5px solid rgba(240, 236, 224, 0.15);
+  background-color: rgba(181, 169, 122, 0.06);
+}
+
+.secao-destaque h2 {
+  font-size: 40px;
+  font-style: italic;
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+
+.secao-destaque p {
+  max-width: 680px;
+  font-size: 16px;
+  opacity: 0.75;
+}
+
+/* GRID DE HOMENAGENS */
+.grid-homenagens {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background-color: rgba(240, 236, 224, 0.15);
+  margin-top: 40px;
+  border: 0.5px solid rgba(240, 236, 224, 0.15);
+}
+
+.card-homenagem {
+  background-color: #1a1a18;
+  padding: 28px 24px;
+}
+
+.card-ano {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #b5a97a;
+  margin-bottom: 12px;
+}
+
+.card-nome {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.card-info {
+  font-size: 12px;
+  opacity: 0.45;
+  letter-spacing: 0.5px;
+}
+
+/* SEÇÃO FINAL */
+.secao-final {
+  padding: 80px 48px;
+  border-bottom: 0.5px solid rgba(240, 236, 224, 0.15);
+  max-width: 700px;
+}
+
+.secao-final h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* RODAPÉ */
+footer {
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+footer p {
+  font-size: 11px;
+  opacity: 0.35;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* RESPONSIVO — celular */
+@media (max-width: 600px) {
+  nav {
+    padding: 16px 24px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .hero, .secao, .secao-destaque, .secao-final, footer {
+    padding: 48px 24px;
+  }
+
+  h1 { font-size: 32px; }
+  h2 { font-size: 24px; }
+
+  .grid-homenagens {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .imagem-full img {
+    height: 250px;
+  }
+
+  .imagem-legenda {
+    left: 24px;
+  }
+}
